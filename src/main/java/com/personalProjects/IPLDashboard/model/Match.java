@@ -1,18 +1,20 @@
 package com.personalProjects.IPLDashboard.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class Match {
+    @Id
     private Long id;
     private String city;
     private LocalDate date;
@@ -29,8 +31,8 @@ public class Match {
     private String margin;
     private String method;
     private String playerOfMatch;
-    private List<String> team1Players;
-    private List<String> team2Players;
+    private String team1Players;
+    private String team2Players;
     private String umpire1;
     private String umpire2;
 }
