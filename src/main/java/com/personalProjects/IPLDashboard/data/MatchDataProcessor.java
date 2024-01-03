@@ -4,7 +4,6 @@ package com.personalProjects.IPLDashboard.data;
 import com.personalProjects.IPLDashboard.model.Match;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemProcessor;
-
 import java.time.LocalDate;
 
 @Slf4j
@@ -17,7 +16,7 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
         match.setId(Long.valueOf(matchInput.getID()));
         match.setCity(matchInput.getCity());
         match.setDate(LocalDate.parse(matchInput.getDate()));
-        match.setSeason(matchInput.getSeason());
+        match.setSeason(Integer.valueOf(matchInput.getSeason()));
         match.setMatchNumber(matchInput.getMatchNumber());
         match.setTeam1(matchInput.getTeam1());
         match.setTeam2(matchInput.getTeam2());

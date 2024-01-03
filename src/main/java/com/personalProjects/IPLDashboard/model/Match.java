@@ -5,9 +5,7 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Data
@@ -18,7 +16,7 @@ public class Match {
     private Long id;
     private String city;
     private LocalDate date;
-    private String season;
+    private Integer season;
     private String matchNumber;
     private String team1;
     private String team2;
